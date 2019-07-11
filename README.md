@@ -87,3 +87,4 @@ HWS.getUserData({
 
 ## Changelog
 * ver. 0.1.0 (2019/6/11) : ユーザデータ読み書きを実装
+* ver. 0.1.1 (2019/7/11) : データ書き込み時に，ObjectであればJSON.stringify()するよう修正
