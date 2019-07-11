@@ -4,7 +4,7 @@
  */
 
 const HWS = {
-    version: "0.1.0",
+    version: "0.1.1",
     
     /*
       ユーザデータの保存
@@ -15,6 +15,10 @@ const HWS = {
       opt.error: 失敗時コールバック
      */
     setUserData: function(opt) {
+	if(opt && opt.data instanceof Object) {
+	    opt.data = JSON.stringify(opt.data);
+	}
+	
 	HWS_Internal.callSafeApi({
 	    url: "/api/v1/user/set_user_data",
 	    method: "POST",
