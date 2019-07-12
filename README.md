@@ -28,7 +28,6 @@ HWS.setUserData(opt)
 
 | field | description |
 | ------ | ------ |
-| opt.contents_id | **[required]** 浜島Webサポートで指定されるコンテンツを識別するための文字列（アプリケーションごとの名前空間として使用される） |
 | opt.key | **[required]** データを格納する項目名 |
 | opt.data | **[required]** 保存されるデータ |
 | opt.success | 保存成功時のコールバック |
@@ -44,7 +43,6 @@ const userData = {
 }
 
 HWS.setUserData({
-    client_id: "sample-client-id",
     key: "app-setting",
     data: userData,
     success: function() {
@@ -64,7 +62,6 @@ HWS.getUserData(opt)
 
 | field | description |
 | ------ | ------ |
-| opt.contents_id | **[required]** 浜島Webサポートで指定されるコンテンツを識別するための文字列（アプリケーションごとの名前空間として使用される） |
 | opt.key | **[required]** データを格納する項目名 |
 | opt.success | 保存成功時のコールバック |
 | opt.error | 保存失敗時のコールバック |
@@ -73,7 +70,6 @@ HWS.getUserData(opt)
 
 ```javascript
 HWS.getUserData({
-    client_id: "sample-client-id",
     key: "app-setting",
     success: function(data) {
         alert("data loaded");
@@ -88,3 +84,4 @@ HWS.getUserData({
 ## Changelog
 * ver. 0.1.0 (2019/6/11) : ユーザデータ読み書きを実装
 * ver. 0.1.1 (2019/7/11) : データ書き込み時に，ObjectであればJSON.stringify()するよう修正
+* ver. 0.1.2 (2019/7/12) : データ読み書き時にコンテンツIDを指定しないよう修正

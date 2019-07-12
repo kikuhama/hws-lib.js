@@ -4,11 +4,10 @@
  */
 
 const HWS = {
-    version: "0.1.1",
+    version: "0.1.2",
     
     /*
       ユーザデータの保存
-      opt.content_id: [required] 浜島WebサポートコンテンツID
       opt.key: [required] データキー
       opt.data: [required] ユーザデータ
       opt.success: 成功時コールバック
@@ -23,7 +22,7 @@ const HWS = {
 	    url: "/api/v1/user/set_user_data",
 	    method: "POST",
 	    dataType: "json",
-	    params: {content_id: opt.content_id, key: opt.key, value: opt.data},
+	    params: {key: opt.key, value: opt.data},
 	    success: opt.success ? opt.success : undefined,
 	    error: opt.error ? opt.error : undefined
 	});
@@ -31,7 +30,6 @@ const HWS = {
 
     /*
       ユーザデータの取得
-      opt.content_id: [required] 浜島WebサポートコンテンツID
       opt.key: [required] データキー
       opt.success: 成功時コールバック
       opt.error: 失敗時コールバック
@@ -41,7 +39,7 @@ const HWS = {
 	    url: "/api/v1/user/get_user_data",
 	    method: "POST",
 	    dataType: "json",
-	    params: {content_id: opt.content_id, key: opt.key},
+	    params: {key: opt.key},
 	    success: opt.success ? opt.success : undefined,
 	    error: opt.error ? opt.error : undefined
 	});
