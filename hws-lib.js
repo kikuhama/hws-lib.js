@@ -4,7 +4,7 @@
  */
 
 const HWS = {
-    version: "0.1.3",
+    version: "0.1.4",
 
     /*
        ユーザデータの保存
@@ -44,7 +44,7 @@ const HWS = {
             error: opt.error ? opt.error : undefined
         });
     },
-}
+};
 
 const HWS_Internal = {
     /*
