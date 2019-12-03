@@ -4,7 +4,7 @@
  */
 
 const HWS = {
-    version: "0.1.2",
+    version: "0.1.3",
 
     /*
        ユーザデータの保存
@@ -58,7 +58,7 @@ const HWS_Internal = {
      */
     fetch: function(opt) {
         if(!opt || !opt.url) {
-            throw "insufficient parameter"
+            throw "insufficient parameter";
         }
         const method = opt.method ? opt.method : "GET";
         const dataType = opt.dataType ? opt.dataType : "json";
@@ -122,4 +122,4 @@ const HWS_Internal = {
             }
         });
     },
-}
+};
