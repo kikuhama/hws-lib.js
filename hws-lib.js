@@ -94,7 +94,13 @@ const HWS_Internal = {
             }
         });
         xhr.open(method, opt.url);
-        xhr.send(fd);
+        if(opt.params) {
+	    xhr.send(fd);
+        }
+        else {
+            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            xhr.send("");
+        }
     },
 
     /*
